@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shallow vs Deep Java</title>
+    <link rel="stylesheet" type="text/css" href="honstyl.css">
+</head>
+
+<div class="header">
+    <h1>Shallow Copy vs Deep Copy in Java</h1>
+    <h4>CISC 191 Intermediate Java Honors Project by Aaron Cayanan</h4>
+</div>
+
+<div class="toc">
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#shallow">Shallow Copy</a></li>
+        <li><a href="#deep">Deep Copy</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
+</div>
+
+<div class="thewhat">
+    <h2 id="intro">Introduction</h2>
+    <p>When working with objects in Java, it is important to understand the difference between shallow and deep copies.
+        Before we get into the differences, we need to understand what an object is. In Java, an object is an instance
+        of a class and
+        is essential for use of attributes and methods of the class. <br> <br>
+        Consider the following example:
+    </p>
+    <pre>
+        // Define a class named Car
+        public class Car {
+            // Attributes
+            String make;
+            String model;
+            int year;
+            String color;
+
+            // Constructor
+            public Car(String make, String model, int year, String color) {
+                this.make = make;
+                this.model = model;
+                this.year = year;
+                this.color = color;
+            }
+
+            // Method to drive the car
+            public void drive() {
+                System.out.println("Vroom vroom!");
+            }
+        }
+    </pre>
+    <p>In this example, we created a class named Car with instance variables 'brand', 'model', and 'year'. The class
+        has a constructor 'Car()' to initalize the instance variables when an object is created. We also created a
+        method
+        'drive()' that prints "Vroom vroom!" to the console when called. <br> <br>
+        Using this example, an object created with is class will consist of:
+    <ol>
+        <li>Identity: the unique name to an object that will be associated with the 'Car' class and is used to
+            distinguish it from other objects as well as interact with other objects</li>
+        <li>State: which represents the attributes of an object, used to reflect the properties of the created object
+        </li>
+        <li>Behavior: which represents the methods of the object, which is used to interact with other objects.</li>
+    </ol>
+    Example of an object: myCar
+    </p>
+    <table style="width:100%">
+        <tr>
+            <th>Identity</th>
+            <th>State/Attributes</th>
+            <th>Behavior</th>
+        </tr>
+        <tr>
+            <th>Name of Car</th>
+            <th>Make<br>
+                Model<br>
+                Year<br>
+                Color</th>
+            <th>
+                Drive
+            </th>
+        </tr>
+    </table>
+</div>
+
+<div class="references">
+    <h2>List of References:</h2>
+    <ul>
+        <li><a
+                href="https://www.geeksforgeeks.org/classes-objects-java/?ref=header_search">https://www.geeksforgeeks.org/classes-objects-java/?ref=header_search</a>
+        </li>
+    </ul>
+</div>
+
+</html>
